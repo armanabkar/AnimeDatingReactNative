@@ -7,7 +7,7 @@ import {
   FlatList,
 } from "react-native";
 import { CardItem, Icon } from "../components";
-import DEMO from "../assets/data/demo";
+import characters from "../assets/data/characters";
 import styles, { DARK_GRAY } from "../assets/styles";
 
 const Matches = () => (
@@ -25,7 +25,7 @@ const Matches = () => (
 
       <FlatList
         numColumns={2}
-        data={DEMO}
+        data={characters.slice(0, 7)}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
           <TouchableOpacity>

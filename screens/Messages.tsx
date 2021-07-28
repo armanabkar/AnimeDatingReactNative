@@ -7,7 +7,7 @@ import {
   FlatList,
 } from "react-native";
 import { Icon, Message } from "../components";
-import DEMO from "../assets/data/demo";
+import characters from "../assets/data/characters";
 import styles, { DARK_GRAY } from "../assets/styles";
 
 const Messages = () => (
@@ -24,7 +24,7 @@ const Messages = () => (
       </View>
 
       <FlatList
-        data={DEMO}
+        data={characters.slice(0, 11)}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
           <TouchableOpacity>

@@ -44,6 +44,7 @@ export default StyleSheet.create({
   },
   matchesTextCardItem: {
     color: WHITE,
+    fontSize: 16
   },
   descriptionCardItem: {
     color: GRAY,
@@ -195,8 +196,9 @@ export default StyleSheet.create({
     paddingTop: 25,
     paddingBottom: 5,
     color: BLACK,
-    fontSize: 26,
+    fontSize: 28,
     textAlign: "center",
+    fontWeight: "bold",
   },
   descriptionProfileItem: {
     color: DARK_GRAY,
