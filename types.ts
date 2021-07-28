@@ -1,11 +1,11 @@
 export type CardItemT = {
-  description?: string;
+  neighborhood?: string;
   hasActions?: boolean;
   hasVariant?: boolean;
   image: any;
   isOnline?: boolean;
-  matches?: string;
   name: string;
+  age?: number;
 };
 
 export type IconT = {
@@ -22,13 +22,12 @@ export type MessageT = {
 };
 
 export type ProfileItemT = {
-  age?: string;
+  age?: number;
   info1?: string;
   info2?: string;
   info3?: string;
   info4?: string;
-  location?: string;
-  matches: string;
+  neighborhood?: string;
   name: string;
 };
 
@@ -38,26 +37,16 @@ export type TabBarIconT = {
   text: string;
 };
 
-export type DataT = {
+export type CharacterT = {
   id: number;
   name: string;
-  isOnline: boolean;
-  match: string;
-  description: string;
-  message: string;
+  neighborhood: string;
+  age: number;
   image: any;
-  age?: string;
+  isOnline: boolean;
+  message: string;
   info1?: string;
   info2?: string;
   info3?: string;
   info4?: string;
-  location?: string;
-};
-
-export type Character = {
-  id: number;
-  name: String;
-  neighborhood: string;
-  age: number;
-  image: string;
 };

@@ -11,22 +11,23 @@ import styles, {
 } from "../assets/styles";
 
 const CardItem = ({
-  description,
+  neighborhood,
   hasActions,
   hasVariant,
   image,
   isOnline,
-  matches,
   name,
+  age,
 }: CardItemT) => {
   // Custom styling
   const fullWidth = Dimensions.get("window").width;
+  const fullHeight = Dimensions.get("window").height;
 
   const imageStyle = [
     {
       borderRadius: 8,
       width: hasVariant ? fullWidth / 2 - 30 : fullWidth - 80,
-      height: hasVariant ? 170 : 350,
+      height: hasVariant ? fullHeight / 4.5 : fullHeight / 1.8,
       margin: hasVariant ? 0 : 20,
     },
   ];
@@ -34,7 +35,7 @@ const CardItem = ({
   const nameStyle = [
     {
       paddingTop: hasVariant ? 10 : 15,
-      paddingBottom: hasVariant ? 5 : 7,
+      paddingBottom: hasVariant ? 5 : 0,
       color: "#363636",
       fontSize: hasVariant ? 15 : 30,
     },
@@ -45,11 +46,11 @@ const CardItem = ({
       {/* IMAGE */}
       <Image source={image} style={imageStyle} />
 
-      {/* MATCHES */}
-      {matches && (
+      {/* AGE & LOCATION */}
+      {neighborhood && (
         <View style={styles.matchesCardItem}>
           <Text style={styles.matchesTextCardItem}>
-            <Icon name="heart" color={WHITE} size={13} /> {matches}% Match!
+            {age} - {neighborhood}
           </Text>
         </View>
       )}
@@ -57,13 +58,8 @@ const CardItem = ({
       {/* NAME */}
       <Text style={nameStyle}>{name}</Text>
 
-      {/* DESCRIPTION */}
-      {description && (
-        <Text style={styles.descriptionCardItem}>{description}</Text>
-      )}
-
       {/* STATUS */}
-      {!description && (
+      {!neighborhood && (
         <View style={styles.status}>
           <View style={isOnline ? styles.online : styles.offline} />
           <Text style={styles.statusText}>

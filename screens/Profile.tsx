@@ -11,17 +11,8 @@ import DEMO from "../assets/data/demo";
 import styles, { WHITE } from "../assets/styles";
 
 const Profile = () => {
-  const {
-    age,
-    image,
-    info1,
-    info2,
-    info3,
-    info4,
-    location,
-    match,
-    name,
-  } = DEMO[7];
+  const { age, image, info1, info2, info3, info4, neighborhood, name } =
+    DEMO[7];
 
   return (
     <ImageBackground
@@ -52,10 +43,9 @@ const Profile = () => {
         </ImageBackground>
 
         <ProfileItem
-          matches={match}
           name={name}
           age={age}
-          location={location}
+          neighborhood={neighborhood}
           info1={info1}
           info2={info2}
           info3={info3}

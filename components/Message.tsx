@@ -8,7 +8,9 @@ const Message = ({ image, lastMessage, name }: MessageT) => (
     <Image source={image} style={styles.avatar} />
     <View>
       <Text>{name}</Text>
-      <Text style={styles.message}>{lastMessage}</Text>
+      <Text style={styles.message}>
+        {lastMessage.replace(/(.{40})..+/, "$1...")}
+      </Text>
     </View>
   </View>
 );

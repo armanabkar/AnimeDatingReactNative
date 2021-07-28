@@ -31,8 +31,8 @@ const Home = () => {
                 hasActions
                 image={item.image}
                 name={item.name}
-                description={item.description}
-                matches={item.match}
+                age={item.age}
+                neighborhood={item.neighborhood}
               />
             </Card>
           ))}

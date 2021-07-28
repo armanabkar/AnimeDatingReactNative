@@ -9,7 +9,7 @@ const TabBarIcon = ({ focused, iconName, text }: TabBarIconT) => {
 
   return (
     <View style={styles.iconMenu}>
-      <Icon name={iconName} size={16} color={iconFocused} />
+      <Icon name={iconName} size={18} color={iconFocused} />
       <Text style={[styles.tabButtonText, { color: iconFocused }]}>{text}</Text>
     </View>
   );

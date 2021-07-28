@@ -1,18 +1,17 @@
 import { StyleSheet, Dimensions } from "react-native";
 
-export const PRIMARY_COLOR = "#7444C0";
-export const SECONDARY_COLOR = "#5636B8";
-export const WHITE = "#FFFFFF";
+export const PRIMARY_COLOR = "#FF2D55";
+export const WHITE = "#FBFBFD";
 export const GRAY = "#757E90";
 export const DARK_GRAY = "#363636";
-export const BLACK = "#000000";
+export const BLACK = "#333333";
 
 export const ONLINE_STATUS = "#46A575";
 export const OFFLINE_STATUS = "#D04949";
 
 export const STAR_ACTIONS = "#FFA200";
-export const LIKE_ACTIONS = "#B644B2";
-export const DISLIKE_ACTIONS = "#363636";
+export const LIKE_ACTIONS = "#28C953";
+export const DISLIKE_ACTIONS = "#FF0200";
 export const FLASH_ACTIONS = "#5028D7";
 
 export const DIMENSION_WIDTH = Dimensions.get("window").width;
@@ -79,11 +78,11 @@ export default StyleSheet.create({
     paddingVertical: 20,
   },
   button: {
-    width: 50,
-    height: 50,
+    width: 60,
+    height: 60,
     borderRadius: 30,
     backgroundColor: WHITE,
-    marginHorizontal: 7,
+    marginHorizontal: 8,
     alignItems: "center",
     justifyContent: "center",
     elevation: 1,
@@ -93,11 +92,11 @@ export default StyleSheet.create({
     shadowOffset: { height: 10, width: 0 },
   },
   miniButton: {
-    width: 30,
-    height: 30,
+    width: 40,
+    height: 40,
     borderRadius: 30,
     backgroundColor: WHITE,
-    marginHorizontal: 7,
+    marginHorizontal: 8,
     alignItems: "center",
     justifyContent: "center",
     elevation: 1,
@@ -153,11 +152,11 @@ export default StyleSheet.create({
     width: DIMENSION_WIDTH - 100,
   },
   avatar: {
-    borderRadius: 30,
+    borderRadius: 12,
     width: 60,
     height: 60,
-    marginRight: 20,
-    marginVertical: 15,
+    marginRight: 10,
+    marginVertical: 10,
   },
   message: {
     color: GRAY,
@@ -195,15 +194,15 @@ export default StyleSheet.create({
   name: {
     paddingTop: 25,
     paddingBottom: 5,
-    color: DARK_GRAY,
-    fontSize: 15,
+    color: BLACK,
+    fontSize: 26,
     textAlign: "center",
   },
   descriptionProfileItem: {
-    color: GRAY,
+    color: DARK_GRAY,
     textAlign: "center",
     paddingBottom: 20,
-    fontSize: 13,
+    fontSize: 18,
   },
   info: {
     paddingVertical: 8,
@@ -217,7 +216,7 @@ export default StyleSheet.create({
   },
   infoContent: {
     color: GRAY,
-    fontSize: 13,
+    fontSize: 15,
   },
 
   // CONTAINER - GENERAL
@@ -293,7 +292,7 @@ export default StyleSheet.create({
     marginLeft: 10,
     height: 50,
     borderRadius: 25,
-    backgroundColor: SECONDARY_COLOR,
+    backgroundColor: PRIMARY_COLOR,
     paddingHorizontal: 20,
   },
 

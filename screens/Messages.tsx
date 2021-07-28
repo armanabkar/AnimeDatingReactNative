@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  ScrollView,
   Text,
   TouchableOpacity,
   ImageBackground,
