@@ -7,8 +7,9 @@ import {
   FlatList,
 } from "react-native";
 import { Icon, Message } from "../components";
-import characters from "../assets/data/characters";
 import styles, { DARK_GRAY } from "../assets/styles";
+import store from "../store";
+import { observer } from "mobx-react-lite";
 
 const Messages = () => (
   <ImageBackground
@@ -24,15 +25,11 @@ const Messages = () => (
       </View>
 
       <FlatList
-        data={characters.slice(0, 11)}
+        data={store.characters.slice(0, 11)}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
           <TouchableOpacity>
-            <Message
-              image={item.image}
-              name={item.name}
-              lastMessage={item.message}
-            />
+            <Message image={item.image} name={item.name} />
           </TouchableOpacity>
         )}
       />
@@ -40,4 +37,4 @@ const Messages = () => (
   </ImageBackground>
 );
 
-export default Messages;
+export default observer(Messages);

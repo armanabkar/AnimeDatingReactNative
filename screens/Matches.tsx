@@ -7,8 +7,9 @@ import {
   FlatList,
 } from "react-native";
 import { CardItem, Icon } from "../components";
-import characters from "../assets/data/characters";
 import styles, { DARK_GRAY } from "../assets/styles";
+import store from "../store";
+import { observer } from "mobx-react-lite";
 
 const Matches = () => (
   <ImageBackground
@@ -25,7 +26,7 @@ const Matches = () => (
 
       <FlatList
         numColumns={2}
-        data={characters.slice(0, 7)}
+        data={store.characters.slice(0, 9)}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
           <TouchableOpacity>
@@ -42,4 +43,4 @@ const Matches = () => (
   </ImageBackground>
 );
 
-export default Matches;
+export default observer(Matches);

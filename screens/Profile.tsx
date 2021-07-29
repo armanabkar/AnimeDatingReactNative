@@ -7,12 +7,11 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { Icon, ProfileItem } from "../components";
-import characters from "../assets/data/characters";
 import styles, { WHITE } from "../assets/styles";
+import store from "../store";
 
 const Profile = () => {
-  const { age, image, info1, info2, info3, info4, neighborhood, name } =
-    characters[0];
+  const { age, image, neighborhood, name } = store.characters[10];
 
   return (
     <ImageBackground
@@ -20,7 +19,10 @@ const Profile = () => {
       style={styles.bg}
     >
       <ScrollView style={styles.containerProfile}>
-        <ImageBackground source={image} style={styles.photo}>
+        <ImageBackground
+          source={{ uri: `http://localhost:5000/${image}` }}
+          style={styles.photo}
+        >
           <View style={styles.top}>
             <TouchableOpacity>
               <Icon
@@ -42,15 +44,7 @@ const Profile = () => {
           </View>
         </ImageBackground>
 
-        <ProfileItem
-          name={name}
-          age={age}
-          neighborhood={neighborhood}
-          info1={info1}
-          info2={info2}
-          info3={info3}
-          info4={info4}
-        />
+        <ProfileItem name={name} age={age} neighborhood={neighborhood} />
 
         <View style={styles.actionsProfile}>
           <TouchableOpacity style={styles.circledButton}>

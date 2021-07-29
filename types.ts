@@ -17,18 +17,13 @@ export type IconT = {
 
 export type MessageT = {
   image: any;
-  lastMessage: string;
   name: string;
 };
 
 export type ProfileItemT = {
-  age?: number;
-  info1?: string;
-  info2?: string;
-  info3?: string;
-  info4?: string;
-  neighborhood?: string;
   name: string;
+  age: number;
+  neighborhood: string;
 };
 
 export type TabBarIconT = {
@@ -45,8 +40,4 @@ export type CharacterT = {
   image: any;
   isOnline: boolean;
   message: string;
-  info1?: string;
-  info2?: string;
-  info3?: string;
-  info4?: string;
 };
