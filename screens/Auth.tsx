@@ -1,7 +1,7 @@
 import React from "react";
 import { ImageBackground, View, Text } from "react-native";
-import { TextInput } from "react-native-gesture-handler";
-import styles, { GRAY, PRIMARY_COLOR } from "../assets/styles";
+import styles, { GRAY } from "../assets/styles";
+import AuthField from "../components/AuthField";
 
 export default function Auth({ navigation }: { navigation: any }) {
   return (
@@ -14,25 +14,12 @@ export default function Auth({ navigation }: { navigation: any }) {
           <Text style={{ fontSize: 22 }}>Welcome to</Text>
           <Text style={styles.authTitle}>Anime Dating</Text>
         </View>
+
         <View style={{ marginBottom: 50 }}>
-          <TextInput
-            placeholder="Enter your Name"
-            style={styles.textField}
-            editable
-            maxLength={40}
-          />
-          <TextInput
-            placeholder="Enter your Number"
-            style={styles.textField}
-            editable
-            maxLength={40}
-          />
-          <TextInput
-            placeholder="Enter your Age"
-            style={styles.textField}
-            editable
-            maxLength={40}
-          />
+          <AuthField placeholder="Enter your Name" />
+          <AuthField placeholder="Enter your Number" />
+          <AuthField placeholder="Enter your Age" />
+
           <Text
             style={styles.startButton}
             onPress={() => navigation.navigate("Tab")}

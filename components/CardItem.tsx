@@ -15,7 +15,6 @@ const CardItem = ({
   hasActions,
   hasVariant,
   image,
-  isOnline,
   name,
   age,
 }: CardItemT) => {
@@ -61,9 +60,17 @@ const CardItem = ({
       {/* STATUS */}
       {!neighborhood && (
         <View style={styles.status}>
-          <View style={isOnline ? styles.online : styles.offline} />
+          <View
+            style={
+              isOnline[Math.floor(Math.random() * isOnline.length)]
+                ? styles.online
+                : styles.offline
+            }
+          />
           <Text style={styles.statusText}>
-            {isOnline ? "Online" : "Offline"}
+            {isOnline[Math.floor(Math.random() * isOnline.length)]
+              ? "Online"
+              : "Offline"}
           </Text>
         </View>
       )}
@@ -93,3 +100,5 @@ const CardItem = ({
 };
 
 export default CardItem;
+
+const isOnline: boolean[] = [true, false];

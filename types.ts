@@ -3,7 +3,6 @@ export type CardItemT = {
   hasActions?: boolean;
   hasVariant?: boolean;
   image: string;
-  isOnline?: boolean;
   name: string;
   age?: number;
 };
@@ -32,12 +31,15 @@ export type TabBarIconT = {
   text: string;
 };
 
+export type FieldT = {
+  placeholder: string;
+};
+
 export type CharacterT = {
   id: number;
   name: string;
   neighborhood: string;
   age: number;
   image: string;
-  isOnline: boolean;
   message: string;
 };

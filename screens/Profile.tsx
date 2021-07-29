@@ -10,9 +10,10 @@ import { Icon, ProfileItem } from "../components";
 import styles, { WHITE } from "../assets/styles";
 import store from "../store";
 import K from "../Constants/K";
+import { CharacterT } from "../types";
 
 const Profile = () => {
-  const { age, image, neighborhood, name } = store.characters[10];
+  const { age, image, neighborhood, name }: CharacterT = store.characters[10];
 
   return (
     <ImageBackground
