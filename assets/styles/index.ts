@@ -30,11 +30,6 @@ export default StyleSheet.create({
     shadowColor: BLACK,
     shadowOffset: { height: 0, width: 0 },
   },
-  cardsContainer: {
-    justifyContent: "center", //Centered horizontally
-    alignItems: "center", //Centered vertically
-    flex: 1,
-  },
   matchesCardItem: {
     marginTop: -35,
     backgroundColor: PRIMARY_COLOR,
@@ -45,10 +40,7 @@ export default StyleSheet.create({
   matchesTextCardItem: {
     color: WHITE,
     fontSize: 16,
-  },
-  descriptionCardItem: {
-    color: GRAY,
-    textAlign: "center",
+    fontWeight: "700",
   },
   status: {
     paddingBottom: 10,
@@ -77,6 +69,13 @@ export default StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     paddingVertical: 20,
+  },
+  startButton: {
+    fontSize: 28,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginTop: 20,
+    color: PRIMARY_COLOR,
   },
   button: {
     width: 60,
@@ -179,19 +178,6 @@ export default StyleSheet.create({
     shadowColor: BLACK,
     shadowOffset: { height: 0, width: 0 },
   },
-  matchesProfileItem: {
-    width: 135,
-    marginTop: -15,
-    backgroundColor: PRIMARY_COLOR,
-    paddingVertical: 7,
-    paddingHorizontal: 20,
-    borderRadius: 20,
-    alignSelf: "center",
-  },
-  matchesTextProfileItem: {
-    color: WHITE,
-    textAlign: "center",
-  },
   name: {
     paddingTop: 25,
     paddingBottom: 5,
@@ -236,6 +222,15 @@ export default StyleSheet.create({
     alignItems: "center",
   },
   title: { paddingBottom: 10, fontSize: 22, color: DARK_GRAY },
+  authTitle: { fontSize: 32, fontWeight: "bold", color: PRIMARY_COLOR },
+
+  // CONTAINER - AUTH
+  containerAuth: {
+    flex: 1,
+    marginVertical: 50,
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
 
   // CONTAINER - HOME
   containerHome: {
@@ -272,6 +267,20 @@ export default StyleSheet.create({
     justifyContent: "center",
     flexDirection: "row",
     alignItems: "center",
+  },
+  textField: {
+    textAlign: "center",
+    fontSize: 20,
+    justifyContent: "center",
+    alignItems: "stretch",
+    borderBottomWidth: 2,
+    borderTopWidth: 2,
+    borderRightWidth: 2,
+    borderLeftWidth: 2,
+    borderRadius: 8,
+    marginBottom: 10,
+    height: 45,
+    borderColor: GRAY,
   },
   textButton: {
     fontSize: 15,
