@@ -2,13 +2,11 @@ import React from "react";
 import { Text, View, Image } from "react-native";
 import { MessageT } from "../types";
 import styles from "../assets/styles";
+import K from "../Constants/K";
 
 const Message = ({ image, name }: MessageT) => (
   <View style={styles.containerMessage}>
-    <Image
-      source={{ uri: `http://localhost:5000/${image}` }}
-      style={styles.avatar}
-    />
+    <Image source={{ uri: `${K.baseURL}${image}` }} style={styles.avatar} />
     <View>
       <Text style={{ fontWeight: "bold" }}>{name}</Text>
       <Text style={styles.message}>

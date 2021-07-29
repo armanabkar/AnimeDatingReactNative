@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { observer } from "mobx-react-lite";
 import { View, ImageBackground } from "react-native";
 import CardStack, { Card } from "react-native-card-stack-swiper";
-import { City, Filters, CardItem } from "../components";
+import { City, CardItem, Suggestion } from "../components";
 import styles from "../assets/styles";
 import store from "../store";
 
@@ -17,7 +17,7 @@ const Home = () => {
       <View style={styles.containerHome}>
         <View style={styles.top}>
           <City />
-          <Filters />
+          <Suggestion />
         </View>
 
         <CardStack

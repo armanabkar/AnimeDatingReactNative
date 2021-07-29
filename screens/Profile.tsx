@@ -9,6 +9,7 @@ import {
 import { Icon, ProfileItem } from "../components";
 import styles, { WHITE } from "../assets/styles";
 import store from "../store";
+import K from "../Constants/K";
 
 const Profile = () => {
   const { age, image, neighborhood, name } = store.characters[10];
@@ -20,7 +21,7 @@ const Profile = () => {
     >
       <ScrollView style={styles.containerProfile}>
         <ImageBackground
-          source={{ uri: `http://localhost:5000/${image}` }}
+          source={{ uri: `${K.baseURL}${image}` }}
           style={styles.photo}
         >
           <View style={styles.top}>

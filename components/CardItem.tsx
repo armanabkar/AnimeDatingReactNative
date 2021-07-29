@@ -8,7 +8,7 @@ import styles, {
   LIKE_ACTIONS,
   STAR_ACTIONS,
 } from "../assets/styles";
-import store from "../store";
+import K from "../Constants/K";
 
 const CardItem = ({
   neighborhood,
@@ -44,10 +44,7 @@ const CardItem = ({
   return (
     <View style={styles.containerCardItem}>
       {/* IMAGE */}
-      <Image
-        source={{ uri: `http://localhost:5000/${image}` }}
-        style={imageStyle}
-      />
+      <Image source={{ uri: `${K.baseURL}${image}` }} style={imageStyle} />
 
       {/* AGE & LOCATION */}
       {neighborhood && (

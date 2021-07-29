@@ -2,7 +2,7 @@ export type CardItemT = {
   neighborhood?: string;
   hasActions?: boolean;
   hasVariant?: boolean;
-  image: any;
+  image: string;
   isOnline?: boolean;
   name: string;
   age?: number;
@@ -16,7 +16,7 @@ export type IconT = {
 };
 
 export type MessageT = {
-  image: any;
+  image: string;
   name: string;
 };
 
@@ -37,7 +37,7 @@ export type CharacterT = {
   name: string;
   neighborhood: string;
   age: number;
-  image: any;
+  image: string;
   isOnline: boolean;
   message: string;
 };

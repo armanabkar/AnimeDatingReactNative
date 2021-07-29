@@ -44,7 +44,7 @@ export default StyleSheet.create({
   },
   matchesTextCardItem: {
     color: WHITE,
-    fontSize: 16
+    fontSize: 16,
   },
   descriptionCardItem: {
     color: GRAY,
@@ -125,19 +125,19 @@ export default StyleSheet.create({
     textAlign: "center",
   },
 
-  // COMPONENT - FILTERS
-  filters: {
+  // COMPONENT - SUGGESTION
+  suggestions: {
     backgroundColor: WHITE,
     padding: 10,
     borderRadius: 20,
-    width: 90,
+    width: 180,
     elevation: 1,
     shadowOpacity: 0.05,
     shadowRadius: 10,
     shadowColor: BLACK,
     shadowOffset: { height: 0, width: 0 },
   },
-  filtersText: {
+  suggestionText: {
     color: DARK_GRAY,
     fontSize: 13,
     textAlign: "center",
