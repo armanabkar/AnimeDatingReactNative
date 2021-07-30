@@ -2,6 +2,7 @@ import React from "react";
 import { ImageBackground, View, Text } from "react-native";
 import styles, { GRAY } from "../assets/styles";
 import AuthField from "../components/AuthField";
+import { Picker } from "@react-native-picker/picker";
 
 export default function Auth({ navigation }: { navigation: any }) {
   return (
@@ -20,6 +21,11 @@ export default function Auth({ navigation }: { navigation: any }) {
           <AuthField placeholder="Enter your Number" />
           <AuthField placeholder="Enter your Age" />
 
+          <Picker style={styles.textField}>
+            <Picker.Item label="Male" value="male" />
+            <Picker.Item label="Female" value="female" />
+          </Picker>
+
           <Text
             style={styles.startButton}
             onPress={() => navigation.navigate("Tab")}
@@ -27,6 +33,7 @@ export default function Auth({ navigation }: { navigation: any }) {
             Let's Go!
           </Text>
         </View>
+
         <Text style={{ color: GRAY }}>
           *Currently only available in the USA.
         </Text>

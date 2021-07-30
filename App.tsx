@@ -14,6 +14,7 @@ const App = () => (
   <NavigationContainer>
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Auth" component={Auth} />
+
       <Stack.Screen
         name="Tab"
         options={{ headerShown: false, animationEnabled: false }}

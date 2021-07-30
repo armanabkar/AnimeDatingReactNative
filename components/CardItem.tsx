@@ -42,10 +42,8 @@ const CardItem = ({
 
   return (
     <View style={styles.containerCardItem}>
-      {/* IMAGE */}
       <Image source={{ uri: `${K.baseURL}${image}` }} style={imageStyle} />
 
-      {/* AGE & LOCATION */}
       {neighborhood && (
         <View style={styles.matchesCardItem}>
           <Text style={styles.matchesTextCardItem}>
@@ -54,10 +52,8 @@ const CardItem = ({
         </View>
       )}
 
-      {/* NAME */}
       <Text style={nameStyle}>{name}</Text>
 
-      {/* STATUS */}
       {!neighborhood && (
         <View style={styles.status}>
           <View
@@ -75,7 +71,6 @@ const CardItem = ({
         </View>
       )}
 
-      {/* ACTIONS */}
       {hasActions && (
         <View style={styles.actionsCardItem}>
           <TouchableOpacity style={styles.miniButton}>

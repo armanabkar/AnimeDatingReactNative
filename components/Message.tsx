@@ -28,4 +28,8 @@ const messages = [
   "Bats frighten me. It's time my enemies shared my dread.",
   "It's not who I am underneath but what I do that defines me.",
   "You have nothing, nothing to threaten me with. Nothing to do with all your strength.",
+  "Never start with the head. The victim gets all fuzzy. He can't feel the next... See?",
+  "And as for the television's so-called plan, Batman has no jurisdiction.",
+  "This is what happens when an unstoppable force meets an immovable object.",
+  "You want order in Gotham. Batman must take off his mask and turn himself in.",
 ];
